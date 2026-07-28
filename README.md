@@ -32,9 +32,7 @@ from-code-review-to-code-prevention/
 
 ### Ver las slides
 
-🔗 **[Ver presentación en vivo](https://andresanhi.github.io/del-code-review-al-code-prevention)** — versión web (repo separado, [andresanhi/del-code-review-al-code-prevention](https://github.com/andresanhi/del-code-review-al-code-prevention))
-
-📄 También puedes abrir directamente el PDF en [`resources/Del Code Review al Code Prevention — slides.pdf`](resources/Del%20Code%20Review%20al%20Code%20Prevention%20%E2%80%94%20slides.pdf).
+📄 Puedes abrir directamente el PDF en [`resources/Del Code Review al Code Prevention — slides.pdf`](resources/Del%20Code%20Review%20al%20Code%20Prevention%20%E2%80%94%20slides.pdf).
 
 ### Correr la demo Flutter
 
@@ -60,7 +58,7 @@ Por defecto el proyecto arranca en el nivel 🌍 **Terrícola**. Para subir de n
 |---|---|---|
 | 🌍 **Terrícola** | `flutter_lints` + `analysis_options.yaml` | 15 minutos |
 | 🤖 **Androide** | `very_good_analysis` + DCL | 1 hora |
-| ⚡ **Saiyajin** | `custom_lint` + reglas propias del equipo | 1 sprint |
+| ⚡ **Saiyajin** | `custom_lint` + reglas propias del equipo | Un par de semanas |
 
 > **¿Por qué DCL y no DCM?** El paquete gratuito `dart_code_metrics` fue descontinuado en 2023 — hoy DCM es un producto comercial (licencia paga vía [dcm.dev](https://dcm.dev)). `dart_code_linter` (DCL), de Bancolombia, es el fork open source que continuó ese motor y sigue vivo y gratuito en pub.dev. Por eso la demo usa solo DCL en el nivel Androide; DCM se menciona en la charla como contexto histórico, no como dependencia real del proyecto.
 
@@ -102,8 +100,8 @@ Tests de las reglas: `src/lib/packages/team_lints/test/`.
 | `flutter_lints` | Reglas oficiales de Google para Flutter | [pub.dev](https://pub.dev/packages/flutter_lints) |
 | `very_good_analysis` | Reglas estrictas de Very Good Ventures | [pub.dev](https://pub.dev/packages/very_good_analysis) |
 | `dart_code_linter` (DCL) | Fork open source de DCM, mantenido por Bancolombia | [pub.dev](https://pub.dev/packages/dart_code_linter) |
-| DCM | Sucesor comercial de `dart_code_metrics` (licencia paga) | [dcm.dev](https://dcm.dev) |
 | `custom_lint` | Framework para crear reglas personalizadas | [pub.dev](https://pub.dev/packages/custom_lint) |
+| `dart_code_metrics `DCM | Herramienta comercial de `dart_code_metrics` (licencia paga) | [dcm.dev](https://dcm.dev) |
 
 ---
 

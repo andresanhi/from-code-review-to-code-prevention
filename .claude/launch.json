@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "flutter-linters-demo",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NoProfile",
+        "-Command",
+        "Set-Location -LiteralPath 'C:\\Users\\jhony_angulo\\Desktop\\Jhony Angulo\\talks\\linters-flutter\\talk\\from-code-review-to-code-prevention\\src'; flutter run -d web-server --web-port 5987"
+      ],
+      "port": 5987
+    }
+  ]
+}

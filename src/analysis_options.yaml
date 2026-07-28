@@ -1,0 +1,66 @@
+# This file configures the analyzer, which statically analyzes Dart code to
+# check for errors, warnings, and lints.
+#
+# The issues identified by the analyzer are surfaced in the UI of Dart-enabled
+# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be
+# invoked from the command line by running `flutter analyze`.
+#
+# 🎚️ Este archivo se sube de nivel en vivo durante la charla. Cada bloque
+# indica qué (des)comentar. Recuerda descomentar también las dependencias
+# correspondientes en pubspec.yaml y correr `flutter pub get` antes de cada
+# cambio de nivel.
+
+analyzer:
+  # lib/packages/team_lints es un paquete Dart independiente (tiene su
+  # propio pubspec.yaml/analysis_options.yaml). Se excluye siempre para que
+  # el analyzer de la app raíz no intente resolverlo con las dependencias
+  # de este pubspec.yaml.
+  exclude:
+    - lib/packages/team_lints/**
+  plugins:
+    # 🤖 NIVEL ANDROIDE — descomenta para activar DCL (requiere
+    # `dart_code_linter` en pubspec.yaml). Sus reglas se configuran más
+    # abajo, en la clave `dart_code_linter:`.
+    # - dart_code_linter
+    # ⚡ NIVEL SAIYAJIN — descomenta para activar el plugin `custom_lint`
+    # que carga las reglas propias en lib/packages/team_lints (requiere
+    # `custom_lint` y `team_lints` en pubspec.yaml).
+    # - custom_lint
+
+# 🌍 NIVEL TERRÍCOLA — activo por defecto.
+include: package:flutter_lints/flutter.yaml
+
+# 🤖 NIVEL ANDROIDE — comenta el `include` de arriba y descomenta la línea
+# de abajo (requiere `very_good_analysis` en pubspec.yaml), además de
+# descomentar "- dart_code_linter" en `analyzer: plugins:` más arriba.
+# include: package:very_good_analysis/analysis_options.yaml
+
+# 🤖 NIVEL ANDROIDE — reglas de DCL. Elegidas para complementar, no
+# duplicar, flutter_lints/very_good_analysis.
+# ⚠️ Estas reglas de DCL solo se ven en el IDE o corriendo
+# `dart run dart_code_linter:metrics analyze lib` — NO aparecen en
+# `flutter analyze`, porque ese mecanismo clásico de analyzer plugin no
+# corre por esa CLI.
+# dart_code_linter:
+#   rules:
+#     - no-magic-number
+#     - avoid-nested-conditional-expressions
+#     - prefer-trailing-comma
+
+linter:
+  # The lint rules applied to this project can be customized in the
+  # section below to disable rules from the included lint set above,
+  # or to enable additional rules. A list of all available lints and
+  # their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of disabling a lint rule for the entire project in the
+  # section below, it can also be suppressed for a single line of code
+  # or a specific dart file by using the `// ignore: name_of_lint` and
+  # `// ignore_for_file: name_of_lint` syntax on the line or in the file
+  # producing the lint.
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
